@@ -1,0 +1,289 @@
+:root {
+    --tamnoPlava: #140035;
+    --svetloPlava: #39a1ff;
+    --bela: #fff;
+    --svetloSiva: #f7f7f7;
+    --font: 16px;
+    --transition: .4s ease;
+    --padding: 100px 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    font-size: 16px;
+    position: relative;
+
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/*******
+HEADER
+*******/
+button {
+    background: var(--tamnoPlava);
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: 1px solid var(--tamnoPlava);
+    color: var(--bela);
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #777;
+    color: #000;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 4px #000;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .99)), url(slike/it1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    color: #eee;
+}
+
+header hgroup {
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header hgroup h1 {
+    font-size: 6rem;
+    text-shadow: 2px 2px black;
+}
+
+header hgroup p {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px black;
+    color: var(--bela);
+    padding-bottom: 30px;
+}
+
+/*******
+ABOUT
+*******/
+.about {
+    padding: 100px 20px;
+}
+
+.about article:first-child {
+    float: left;
+    width: 45%;
+}
+
+.about article:last-child {
+    float: right;
+    width: 45%;
+    background: var(--svetloPlava);
+    color: var(--bela);
+    padding: 30px;
+}
+
+.about article:last-child h3 {
+    font-size: 2rem;
+    color: #000;
+}
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.about article:first-child h2 {
+    font-size: 3rem;
+}
+
+.about article:first-child p {
+    padding-bottom: 20px;
+}
+
+/*******
+SERVICES
+*******/
+.services img {
+    height: 300px;
+    width: 100%;
+}
+
+.services {
+    padding: var(--padding);
+    background: var(--svetloSiva);
+}
+
+.services article {
+    width: 33%;
+    float: left;
+    padding: 0 20px;
+}
+
+.services h2 {
+    font-size: 3rem;
+    color: var(--tamnoPlava);
+}
+
+.services p {
+    width: 100%;
+    padding: 10px 0 30px 0;
+}
+
+/*******
+PROJECTS
+*******/
+
+.projects {
+    padding: var(--padding);
+
+}
+
+.projects h2 {
+    font-size: 3rem;
+    color: var(--tamnoPlava);
+    text-align: center;
+
+}
+
+.projects h2 + p {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.projects article {
+
+    width: 33%;
+    float: left;
+    padding: 0 20px;
+}
+
+.projects img {
+    width: 100%;
+}
+
+.projects article h3 {
+    color: var(--tamnoPlava);
+    font-size: 1.5rem;
+
+}
+
+.projects article p {
+    padding: 10px 0 20px 0;
+}
+
+/*******
+FOOTER
+*******/
+footer {
+    background: var(--svetloPlava);
+    padding: var(--padding);
+    color: var(--bela);
+
+}
+
+footer article {
+    width: 33%;
+    float: left;
+    padding: 20px;
+}
+
+footer h2 {
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 20px;
+}
+
+footer h3 {
+    font-size: 1.3rem;
+}
+
+footer h3 + p {
+    padding: 20px 0;
+}
+
+/*********
+BOOTOM-BAR
+*********/
+.bottom-bar {
+    background: var(--tamnoPlava);
+    text-align-last: center;
+    color: var(--bela);
+    padding: 30px 0;
+    font-size: 1.5rem;
+}
+
+/*********
+RESPONSIVE
+*********/
+@media (max-width:768px) {
+
+    header hgroup h1 {
+        font-size: 3rem;
+    }
+
+    header hgroup p {
+        font-size: 1rem;
+    }
+
+    button {
+        background: var(--tamnoPlava);
+        padding: 15px 30px;
+        font-size: 0.8rem;
+
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .about article:first-child {
+
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .about article:last-child {
+
+        width: 100%;
+
+    }
+
+    .services article,
+    .projects article,
+    footer article {
+        width: 100%;
+
+    }
+
+    .services article h2,
+    .projects h2,
+    footer h2,
+    .about article:first-child h2 {
+        font-size: 2rem;
+    }
+
+    button {
+        margin-bottom: 20px;
+    }
+
+    .projects,
+    footer,
+    .services {
+        padding: 20px;
+        ;
+    }
+
+}
